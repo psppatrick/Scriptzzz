@@ -17,7 +17,7 @@ cd ~/kali-arm-build-scripts
 # echo "This scipt can also run the ARM Builder script (PI 3  LITE ONLY)"
 # echo "Do you want this scipt to build for you?(Y/N)"
 # read answer
-# if $answer "Y"; then
+# if $answer "Y" || "y"; then
 	# echo "BUILDING ARM IMAGE, THIS IS GONNA TAKE A WHILE"
 	# sleep 5s
 	# kali-arm-build-scripts/rpi3-64-lite.sh 2.0
