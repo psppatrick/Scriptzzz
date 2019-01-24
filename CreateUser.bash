@@ -7,4 +7,3 @@ read CrUser
 
 adduser $CrUser
 
-usermod -aG sudo $CrUser
