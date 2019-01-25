@@ -1,7 +1,11 @@
 #!/bin/bash
 
+#export packages="xfce4 kali-menu wpasupplicant kali-defaults initramfs-tools u-boot-tools openssh-server nmap ncrack sqlmap aircrack-ng john hashcat-data wireshark metasploit-framework wifite dnsmap ismtp cowpatty kismet burpsuite reaver ettercap-graphical mitmproxy httptunnel webshells adminer mysql-common mysql-sandbox"
+#php7.2 php7.2-mysql php7.2-json php7.2-common dnsmap all not found, try build without it
+#
+
 # exports
-export packages="xfce4 kali-menu wpasupplicant kali-defaults initramfs-tools u-boot-tools openssh-server nmap ncrack sqlmap aircrack-ng john hashcat wireshark metasploit-framework wifite dnsmap ismtp cowpatty kismet burpsuite reaver ettercap-graphical mitmproxy httptunnel webshells adminer php7.2 php7.2-mysql php7.2-json php7.2-common mysql-common mysql-sandbox nodejs npm apache2 vsftpd"
+export packages="xfce4 kali-menu wpasupplicant kali-defaults initramfs-tools u-boot-tools openssh-server nmap ncrack sqlmap aircrack-ng john hashcat-data wireshark metasploit-framework wifite dnsmap ismtp cowpatty kismet burpsuite reaver ettercap-graphical mitmproxy httptunnel webshells adminer mysql-common mysql-sandbox nodejs npm apache2 vsftpd"
 export architecture="armhf"
 export MALLOC_CHECK_=0 # workaround for LP: #520465
 export LC_ALL=C
@@ -78,7 +82,7 @@ apt -y install locales console-common less nano git
 echo "root:toor" | chpasswd
 sed -i -e 's/KERNEL\!="eth\*|/KERNEL\!="/' /lib/udev/rules.d/75-persistent-net-generator.rules
 rm -f /etc/udev/rules.d/70-persistent-net.rules
-apt-get --yes --force-yes install $packages
+apt-get --yes install $packages
 
 rm -f /usr/sbin/invoke-rc.d
 dpkg-divert --remove --rename /usr/sbin/invoke-rc.d
