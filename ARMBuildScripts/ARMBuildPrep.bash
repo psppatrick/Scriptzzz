@@ -2,6 +2,8 @@
 
 cd ~
 
+mkdir -p kali-arm-build-scripts/
+
 git clone https://github.com/offensive-security/kali-arm-build-scripts.git
 
 apt update

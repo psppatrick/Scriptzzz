@@ -35,3 +35,26 @@ export ARCH=arm
 export CROSS_COMPILE=~/arm-stuff/kernel/toolchains/gcc-arm-eabi-linaro-4.6.2/bin/arm-eabi-
 
 echo "Done!" $?
+
+sleep 1s
+
+
+cd ~/Scriptzzz/ARMBuildScripts
+
+./BuildKalirootfs; echo $?
+
+cd ~/kali-arm-build-scripts
+
+./build-deps.sh; echo $?
+
+
+#arm64 pi 3 scripts, I'm doing testing with this so only the basic
+#./rpi3-64-lite.sh 2.0
+#./rpi3-64.sh 2.0
+
+echo "Done!" $?
+
+
+
+
+

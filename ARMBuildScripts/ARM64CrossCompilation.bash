@@ -49,9 +49,15 @@ export CROSS_COMPILE=~/arm-stuff/kernel/toolchains/gcc-linaro-aarch64-linux-gnu-
 
 sleep 1s
 
+cd ~/Scriptzzz/ARMBuildScripts
+
+./BuildKalirootfs; echo $?
+
+sleep 1s 
+
 cd ~/kali-arm-build-scripts
 
-./build-deps.sh
+./build-deps.sh; echo $?
 
 ./rpi3-64-lite.sh 2.0
 #./rpi3-64.sh 2.0
