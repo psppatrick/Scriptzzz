@@ -14,25 +14,27 @@ mysql service restart
 
 cd /tmp/
 
-wget https://github.com/osTicket/osTicket/releases/download/v1.10.4/osTicket-v1.10.4.zip
+wget https://github.com/osTicket/osTicket/releases/download/v1.12.2/osTicket-v1.12.2.zip
 
-unzip osTicket-v1.10.4.zip
+unzip osTicket-v1.12.2.zip
 
-mv upload/* /var/www/html/
-mv scripts/ /var/www/html/
+cp -r upload/* /var/www/html/
+cp -r scripts/* /var/www/html/
 
 rm -rf /var/www/html/index.html
 
-cd /var/www/html/include/ 
+cd /var/www/html/include/
 
 cp ost-sampleconfig.php ost-config.php
 
-cd 
+cd
 
 chown -R www-data:www-data /var/www/html/
 
 chmod 755 -R /var/www/html
 
-chmod 0644 /var/www/html/include/ost-config.php
+chmod 0666 /var/www/html/include/ost-config.php
 
+echo "Now go to the server address, finish setup and come back here to perform
+the finishing touches :) "
 
